@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { MenuItems } from "./MenuItems";
+import CartWidget from "./CartWidget";
 import "./Navbar.css";
 class Navbar extends Component {
-  /* Uso un logo de fontawesome hasta que tenga el de la marca propia.
-     Uso map para mostrar los items de menu que definí em MenuItems.js 
-     Por ahora solamente refieren a #
-  */
+ 
   render() {
     return (
       <nav className="NavbarItems">
@@ -24,6 +22,7 @@ class Navbar extends Component {
             );
           })}
         </ul>
+        <CartWidget />
       </nav>
     );
   }
