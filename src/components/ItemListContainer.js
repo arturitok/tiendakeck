@@ -46,18 +46,17 @@ const ItemListContainer = ({ greeting }) => {
   }, []);
     
 
-
- /* const onAdd = (cantidad) => {
+  const onAdd = (cantidad) => {
     console.log(`Agregando ${cantidad} artículos al carrito`);
     setQty(cantidad);
-  }*/
+  };
 
   return (
     <div>
-      <h2 className="product-list">{greeting}</h2>
+     <h2 className="product-list">{greeting}</h2>
       <p>Elegiste: {cantidad} unidades</p>
-      {/*<ItemCount stock={5} initial={1} onAdd={onAdd} />*/}
-      <ItemList lista={lista}/>
+      <ItemList lista={lista} />
+      <ItemCount stock={5} initial={1} onAdd={onAdd} />
     </div>
   );
 };
