@@ -1,6 +1,5 @@
 import "../estilos.css";
 import { useState, useEffect } from "react";
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 
 const productList = [
@@ -9,7 +8,7 @@ const productList = [
     title: "Camisa Hawaiana",
     description: "Camisa con muchas flores",
     price: 100,
-    pictureUrl: "http://placehold.it/500x300",
+    pictureUrl: "http://placehold.it/350x65",
     categoria: "1",
   },
   {
@@ -17,46 +16,35 @@ const productList = [
     title: "Camisa Alemana",
     description: "Camisa con pocos colores",
     price: 200,
-    pictureUrl: "http://placehold.it/500x300",
+    pictureUrl: "http://placehold.it/350x65",
     categoria: "2",
   },
 ];
 
 const ItemListContainer = ({ greeting }) => {
-  const [cantidad, setQty] = useState(0);
-
   let [lista, setLista] = useState([]);
 
   useEffect(() => {
     const promesa = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(productList)
-      }, 2000)
-    })
+        resolve(productList);
+      }, 2000);
+    });
     promesa
-    .then ((productos)=>{
-      console.log ("Todo OK")
-      setLista(productos)
-      console.log(productos)
-    })
-    .catch (()=>{
-      console.log ("Error")
-    })
-    
+      .then((productos) => {
+        console.log("Todo OK");
+        setLista(productos);
+        console.log(productos);
+      })
+      .catch(() => {
+        console.log("Error");
+      });
   }, []);
-    
-
-  const onAdd = (cantidad) => {
-    console.log(`Agregando ${cantidad} artículos al carrito`);
-    setQty(cantidad);
-  };
 
   return (
     <div>
-     <h2 className="product-list">{greeting}</h2>
-      <p>Elegiste: {cantidad} unidades</p>
+      <h1 className="product-list">{greeting}</h1>
       <ItemList lista={lista} />
-      <ItemCount stock={5} initial={1} onAdd={onAdd} />
     </div>
   );
 };
