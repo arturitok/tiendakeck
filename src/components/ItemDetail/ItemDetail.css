@@ -1,0 +1,41 @@
+.img-detail {
+  width: 45rem;
+  height: 64rem;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.title-detail {
+  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+.price-detail {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+.div {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container-detail {
+  width: 100rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.informacion-detail {
+  width: 45rem;
+}
+.description-detail {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}

@@ -1,30 +1,27 @@
-import React, { Component } from "react";
-import { MenuItems } from "./MenuItems";
-import CartWidget from "./CartWidget";
-import "./Navbar.css";
-class Navbar extends Component {
- 
-  render() {
-    return (
-      <nav className="NavbarItems">
-        <h1 className="brand">Taca Taca</h1>
-        <div className="navbar-logo">
-          <img src="/logo_tacataca_chico.png" alt="logo" />
-        </div>
-        <ul className="nav-menu">
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-        <CartWidget />
-      </nav>
-    );
-  }
+import React from "react";
+import "./NavBar.css";
+import CartIcon from "../CartIcon/CartIcon";
+import { Link } from "react-router-dom";
+
+function NavBar() {
+  return (
+    <nav className="nav">
+      <Link className="brand" to="/">
+        Taca Taca
+      </Link>
+      <div className="bar">
+        <Link className="ropa" to="/category/ropa">
+          Ropa
+        </Link>
+        <Link className="juegos" to="/category/juegos">
+          Juegos
+        </Link>
+        <Link className="icon-cart" to="/cart">
+          <CartIcon />
+        </Link>
+      </div>
+    </nav>
+  );
 }
-export default Navbar;
+
+export default NavBar;
