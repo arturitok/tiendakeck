@@ -1,9 +1,9 @@
 .contador {
   width: 45%;
-  display: flex;
+  display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ece950;
+  background-color:#ece950;
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -12,7 +12,7 @@
   font-size: 1.6rem;
   color: black;
   border-style: hidden;
-  border-color: #ece950;
+  border-color:#ece950;
 }
 
 .contenedor {
@@ -21,23 +21,13 @@
   display: flex;
 }
 
-.cart-button {
-  padding: 0.9rem;
-  width: 25rem;
-  border-style: hidden;
-  border-radius: 0.5rem;
-  color: white;
-  cursor: pointer;
-  background-color: #3437f0;
-  margin-left: 1.5rem;
-}
 
 .botones {
   font-size: 1.5rem;
   width: 2rem;
   height: 2rem;
   color: white;
-  border-style: hidden;
+  border-style:hidden;
   border-radius: 0.5rem;
   background-color: #ece950;
   cursor: pointer;

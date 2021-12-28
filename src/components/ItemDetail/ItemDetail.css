@@ -39,3 +39,31 @@
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+.cart-button {
+  padding: 0.9rem;
+  width: 21.5rem;
+  border-style: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  background-color: #3437f0;
+  margin-left: 0;
+}
+
+.buy-button {
+  padding: 0.9rem;
+  width: 25rem;
+  border-style: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  background-color: #12740e;
+  margin-left: 1.5rem;
+}
+
+.contenedor-terminar-compra {
+  width: 43rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+}
