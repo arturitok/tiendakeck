@@ -1,5 +1,71 @@
-.carrito {
-  font-size: 1.3rem;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70rem;
+}
+
+.total-container {
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.del-button,
+.empty {
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 13rem;
+  border-style: hidden;
+  border-radius: 1.2rem;
+  color: #d8ecee;
+  cursor: pointer;
+  background-color: #636499;
+  margin-bottom: 1.2rem;
+}
+
+.pay {
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 13rem;
+  border-style: hidden;
+  border-radius: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background-color: #12740e;
+  margin-bottom: 1.2rem;
+}
+
+.buy-container {
+  margin-top: 0.5rem;
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.no-items {
+  font-size: 2rem;
+}
+
+.back-shop {
+  font-size: 1.6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 15rem;
+  border-style: hidden;
+  border-radius: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background-color: #3437f0;
+  margin-bottom: 1.2rem;
 }

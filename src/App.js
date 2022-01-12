@@ -5,10 +5,13 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import ItemCategoryList from "./components/ItemCategoryList/ItemCategoryList";
 import Cart from "./components/Cart/Cart";
+import {CartProvider} from "./context/CartContext";
+
 
 const App = () => {
   return (
-    <>
+    <div>
+    <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -18,7 +21,8 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </CartProvider>
+    </div>
   );
 };
 

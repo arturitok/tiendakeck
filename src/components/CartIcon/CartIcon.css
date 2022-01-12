@@ -3,3 +3,14 @@
   width: 2.5rem;
   cursor: pointer;
 }
+.cart-icon {
+  font-size: 2rem;
+  color: darkgrey;
+  width: 100%;
+  background-color: whitesmoke;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2rem;
+}
