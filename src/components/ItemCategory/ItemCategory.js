@@ -11,7 +11,7 @@ function ItemCategory({ title, price, pictureUrl, id }) {
           className="img-category margin"
         ></div>
         <div className="title-category margin">{title}</div>
-        <div className="price-category margin">{price}</div>
+        <div className="price-category margin">${price}</div>
         <div className="contenedor-botones-category">
           <Link to={`/item/${id}`}>
             <button className="comprar">Comprar</button>

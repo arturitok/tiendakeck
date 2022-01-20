@@ -11,7 +11,7 @@ function Item({ title, price, pictureUrl, id }) {
           className="img margin"
         ></div>
         <div className="title margin">{title}</div>
-        <div className="price margin">{price}</div>
+        <div className="price margin">${price}</div>
         <div className="button-container">
           <Link to={`/item/${id}`}>
             <button className="comprar">Comprar</button>

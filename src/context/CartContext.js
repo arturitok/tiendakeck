@@ -1,22 +1,22 @@
 import { createContext, useContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export const CartContext = createContext();
-
 export const useCart = () => useContext(CartContext);
 
 export const CartProvider = (props) => {
   const [products, setProducts] = useState([]);
 
-  const addItem = (data, cantidad) => {
-    if (isInCart(data)) {
+  const addItem = (datos, cantidad) => {
+    if (isInCart(datos)) {
       products.map((prod) => {
-        if (prod.id === data.id) {
+        if (prod.id === datos.id) {
           return (prod.quantity += cantidad);
         }
       });
     } else {
       setProducts((state) => {
-        return [...state, { ...data, quantity: cantidad }];
+        return [...state, { ...datos, quantity: cantidad }];
       });
     }
   };
@@ -24,7 +24,7 @@ export const CartProvider = (props) => {
   const removeItem = (product) => {
     const productosFiltrados = products.filter((elem) => elem !== product);
     setProducts(productosFiltrados);
-     };
+  };
 
   function clear() {
     setProducts([]);
@@ -39,11 +39,63 @@ export const CartProvider = (props) => {
   const totalItems = () =>
     products.reduce((acumulador, items) => acumulador + items.quantity, 0);
   const totalPrice = () =>
-    products.reduce((acumulador, items) => acumulador + items.price * items.quantity, 0);
+    products.reduce(
+      (acumulador, items) => acumulador + items.price * items.quantity,
+      0
+    );
+  const newOrder = {
+    items: [products],
+    date: new Date().toString(),
+    totalItems: totalItems(),
+    totalPrice: totalPrice(),
+    IDOrder: uuidv4(),
+  };
+
+  const [orderState, setOrderState] = useState({
+    ...newOrder,
+    name: "",
+    email: "",
+    emailConfirm: "",
+    phone: "",
+  });
+
+  const updateDatos = (event) => {
+    event.preventDefault();
+    setOrderState({
+      ...orderState,
+      ...newOrder,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const enviarDatos = (event) => {
+    event.preventDefault();
+  };
+
+  function clear() {
+    setProducts([]);
+    setOrderState({
+      ...newOrder,
+      name: "",
+      email: "",
+      emailConfirm: "",
+      phone: "",
+    });
+  }
 
   return (
     <CartContext.Provider
-      value={{ addItem, removeItem, clear, products, totalItems, totalPrice }}
+      value={{
+        addItem,
+        removeItem,
+        clear,
+        products,
+        totalItems,
+        totalPrice,
+        updateDatos,
+        enviarDatos,
+        orderState,
+      }}
     >
       {props.children}
     </CartContext.Provider>

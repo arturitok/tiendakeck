@@ -2,6 +2,7 @@ import React from "react";
 import "../Cart/Cart.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
+import OrderForm from "../OrderForm/OrderForm";
 
 function Carrito() {
   const { removeItem, products, clear, totalItems, totalPrice } = useCart();
@@ -31,12 +32,15 @@ function Carrito() {
           <h1>
             Subtotal: ${totalPrice()} ({totalItems()} unidades)
           </h1>
-          <div className="buy-container">
-            <button className="pay">Pagar</button>
-            <button className="empty" onClick={() => clear(products.elem)}>
-              Vaciar carrito
-            </button>
-          </div>
+          <button className="empty" onClick={() => clear(products.elem)}>
+            Vaciar carrito
+          </button>
+          <div className="campo">Ingrese sus datos para proceder al pago.</div>
+         
+            <div className="contenedor-pagar-vaciar">
+              <OrderForm />
+            </div>
+         
         </>
       ) : (
         <>
@@ -52,3 +56,4 @@ function Carrito() {
 }
 
 export default Carrito;
+
