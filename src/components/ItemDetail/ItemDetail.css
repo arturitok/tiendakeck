@@ -8,13 +8,13 @@
 
 .title-detail {
   margin-bottom: 1.5rem;
-  font-size: 4rem;
-  font-weight: 700;
+  font-size: 6rem;
+  font-weight: 70;
   font-family: "Open Sans", sans-serif;
 }
 
 .price-detail {
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: 1.5rem;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
@@ -27,43 +27,110 @@
 }
 
 .container-detail {
-  width: 100rem;
+  margin-top: 4rem;
+  margin-left:22rem;
+  width: 140rem;
   display: flex;
   justify-content: space-evenly;
 }
 
-.informacion-detail {
+.info-detail {
   width: 45rem;
 }
 .description-detail {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-.cart-button {
-  padding: 0.9rem;
-  width: 21.5rem;
-  border-style: hidden;
-  border-radius: 0.5rem;
-  color: white;
-  cursor: pointer;
-  background-color: #3437f0;
-  margin-left: 0;
-}
 
-.buy-button {
+.cart-button {
   padding: 0.9rem;
   width: 25rem;
   border-style: hidden;
   border-radius: 0.5rem;
   color: white;
   cursor: pointer;
-  background-color: #12740e;
-  margin-left: 1.5rem;
+  background-color: rgba(111, 171, 226, 0.8);
+  margin-top: 1.5rem;
+  transition: 0.5s;
 }
 
-.buy-container{
-  width: 43rem;
-  height: 8rem;
+.cart-button:hover {
+  background-color: rgba(30, 108, 180, 0.8);
+}
+
+.finish-button {
+  padding: 0.9rem;
+  width: 25rem;
+  border-style: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  background-color: rgb(67, 58, 155);
+  margin-top: 1.5rem;
+  transition: 0.7s;
+}
+
+.finish-button:hover {
+  background-color: rgb(186, 181, 207);
+  color: rgb(1, 4, 163);
+  font-weight:bolder;
+}
+
+.back-button {
+  padding: 0.9rem;
+  width: 25rem;
+  border-style: hidden;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+  background-color:rgba(14, 175, 140, 0.8);
+  margin-top: 1.5rem;
+  transition: 0.7s;
+}
+
+.back-button:hover {
+  background-color: rgb(146, 247, 200);
+  color: rgb(3, 97, 45);
+  font-weight: bolder;
+}
+
+.finish-buy-container {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .price-detail {
+    font-size: 4rem;
+  }
+
+  .title-detail {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+  }
+
+  .container-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .div {
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .informacion-detail {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+  }
+
+  .img-detail {
+    width: 26rem;
+    height: 36rem;
+  }
 }

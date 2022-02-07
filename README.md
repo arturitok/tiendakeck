@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Documentación del proyecto - e-commerce Tienda Taca Taca
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción general
 
-## Available Scripts
+Esta aplicación fue desarrollada en el marco del curso de ReactJS de CoderHouse y se trata de una plataforma e-commerce que muestra información de productos que el usuario puede comprar (en sentido figurado), realizando la navegación por categorías (en este caso dos: ropa y juguetes) y visualizando el detalle de cada producto.
+Los artículos están alamcenados en un base de datos Firebase.
 
-In the project directory, you can run:
+## Tecnologías empleadas
 
-### `npm start`
+El sitio fue creado con React JS y para su implementación se utilizaron los siguientes paquetes:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Create-React-App](https://create-react-app.dev/docs/getting-started)
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Firebase](https://firebase.google.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Probar la aplicación
 
-### `npm test`
+En caso de querer replicar el proyecto seguir estos pasos desde git bash:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clonar el repositorio
 
-### `npm run build`
+   git clone https://ggithub.com/arturitok/tiendakeck
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Ubicarse en la carpeta correspondiente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   cd tiendakeck
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Ejecutar el instalador (incluir todas las dependencias)
 
-### `npm run eject`
+   npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Una realizada las instalación con todas las dependencias, ejecutar
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Se abrirá el browser predeterminado y se ejecutará la aplicación. Accesible desde:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+   http://localhost:3000
 
-## Learn More
+   Si el puerto está ocupado el script sugerirá otro port (por ejemplo http://localhost:3001)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Detener el servicio:
+   En la consola presionar Ctrl+C
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Funcionalidades:
 
-### Code Splitting
+Para cumplir con las diferentes funcionalidades requeridas, se trató de mantener un diseño lo más sencillo posible. Al ingresar se muestran directamente los productos ofrecidos, cada cual posee una foto, botones para ver los detalles y eventualmente agregar al carrito.
+La barra de navegación exhibe un link con la marca de la tienda que dirige al home y un link para cada una de las dos categorías disponibles en la tienda.
+En caso de tener productos en el carrito se muestra el icono en la parte superior derecha aosciado al widget que permite accerder al carrito.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Al ingresar al detalle de un producto observaremos la imagen asociada, la descripción completa y 2 botones de selección que permiten aumentar o disminuir la cantidad, los límites de la cantidad están dados por el valor inicial (1) y la cantidad en stock del artículo. Finalmente se podrá agregar el producto al carrito, visualizando el cambio de estado en el widget del carrito
 
-### Analyzing the Bundle Size
+Si hay items en el carrito, el icono que se encuentra en la parte superior derecha reflejará la cantidad de artículos cargados. En caso de borrar o eliminar, el contador numérico se actualizará o dado el caso desaparecerá.
+Haciendo click en el icono de carrito o en el botón "terminar compra" desde el detalle del artículo se accederá al contenido del carrito, donde se visualizarán los subtotales y totales, se podrá eliminar ítems, vaciar el carrito o terminar la compra, en cuyo caso será necesario completar los datos del formulario.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+El formulario contendrá los siguientes campos:
 
-### Making a Progressive Web App
+- Nombre.
+- Teléfono.
+- Email.
+- Confirmación de email.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+El botón de terminar la compra solamente realizará una acción en caso de haberse completado todos los campos.
 
-### Advanced Configuration
+Al finalizar la compra obtendremos la confirmación del proceso y un ID de compra asociado.
+El carrito quedará vacio y podremos acceder al listado de productos desde el botón correspondiente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Estructura de la aplicación:
 
-### Deployment
+La implementación de la estructura intenta aislar las responsabilidades de cada componente, siempre que sea posible. En forma esquemática la arquitectura se visualiza en el siguiente diagrama.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Información del autor:
+Mi nombre es Arturo y estoy haciendo las primeras armas en Front End Developing.
 
-### `npm run build` fails to minify
+Cualquier aporte o comentario será muy bienvendido.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estoy en Gihub y Linkedin.
+

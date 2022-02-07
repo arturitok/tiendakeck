@@ -28,7 +28,7 @@
   border-radius: 1rem;
 }
 
-.comprar {
+.buy-button {
   font-size: 1.6rem;
   padding: 1rem;
   margin-top: 1rem;
@@ -37,22 +37,34 @@
   border-radius: 1.2rem;
   color: white;
   cursor: pointer;
-  background-color: #ece950;
+  background-color:  rgb(54, 189, 177);
   margin-bottom: 1.2rem;
+  transition: 0.5s;
 }
 
-.ver-detalle {
+.buy-button:hover {
+  background-color: #ece950;
+}
+
+
+.detail-view {
   font-size: 1.6rem;
   padding: 1rem;
   margin-top: 1rem;
   width: 13rem;
   border-style: hidden;
   border-radius: 1.2rem;
-  color: #a8a3f5;
+  color: white;
   cursor: pointer;
-  background-color: #0f20be;
+  background-color: rgb(55, 80, 160);
   margin-bottom: 1.2rem;
 }
+
+.detail-view:hover{
+  background-color: #ece950;
+  color: black;
+}
+
 .button-container {
   display: flex;
   justify-content: space-around;

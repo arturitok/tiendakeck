@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useCart } from "../../context/CartContext";
-import { Link } from "react-router-dom";
-import "../OrderForm/OrderForm.css";
+import React, { useState } from "react"
+import { useCart } from "../../context/CartContext"
+import { Link } from "react-router-dom"
+import "../OrderForm/OrderForm.css"
 
 function OrderForm() {
-  const { updateDatos, enviarDatos, orderState, clear } = useCart();
-  const [ButtonVisibility, setButtonVisibility] = useState(false);
-  const [confirmVisibility, setConfirmVisibility] = useState(true);
+  const { updateDatos, enviarDatos, orderState } = useCart()
+  const [ButtonVisibility, setButtonVisibility] = useState(false)
+  const [confirmVisibility, setConfirmVisibility] = useState(true)
 
   const confirm = () => {
     if (
@@ -15,10 +15,10 @@ function OrderForm() {
       orderState.email !== "" &&
       orderState.email === orderState.emailConfirm
     ) {
-      setButtonVisibility(true);
-      setConfirmVisibility(false);
+      setButtonVisibility(true)
+      setConfirmVisibility(false)
     }
-  };
+  }
 
   return (
     <>
@@ -83,7 +83,6 @@ function OrderForm() {
       <Link to="/cart/payment">
         {ButtonVisibility && (
           <button
-            onClick={clear}
             onSubmit={(event) => enviarDatos(event)}
             className="payment-confirm green"
             type="submit"
@@ -93,7 +92,7 @@ function OrderForm() {
         )}
       </Link>
     </>
-  );
+  )
 }
 
-export default OrderForm;
+export default OrderForm

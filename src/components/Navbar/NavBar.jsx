@@ -1,13 +1,13 @@
-import React from "react";
-import "./NavBar.css";
-import CartIcon from "../CartWidget/CartWidget";
-import { Link } from "react-router-dom";
+import React from "react"
+import "./NavBar.css"
+import CartIcon from "../CartWidget/CartWidget"
+import { Link } from "react-router-dom"
 
 function NavBar() {
   return (
     <nav className="nav">
       <Link className="brand" to="/">
-        Taca Taca
+      <img src="/assets/icons/marcah.png" alt="logo" />
       </Link>
       <div className="bar">
         <Link className="ropa" to="/category/ropa">
@@ -16,12 +16,12 @@ function NavBar() {
         <Link className="juegos" to="/category/juegos">
           Juegos
         </Link>
-        <Link className="icon-cart" to="/cart">
-          <CartIcon />
-        </Link>
       </div>
+      <Link className="cart-widget" to="/cart">
+        <CartIcon />
+      </Link>
     </nav>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar

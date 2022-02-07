@@ -1,34 +1,34 @@
-.contador {
-  width: 45%;
+.counter {
+  width: 25rem;
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color:#ece950;
+  background-color: #ccda50;
   padding: 1rem;
   border-radius: 0.5rem;
 }
 
-.cantidad {
+.counter-quantity {
   font-size: 1.6rem;
-  color: black;
+  font-weight: bold;
+  color: rgba(47, 72, 100, 0.479);
   border-style: hidden;
-  border-color:#ece950;
+  border-color:#8ee2c6;
 }
 
-.contenedor {
+.counter-container {
   width: 43rem;
   height: 4rem;
   display: flex;
 }
 
-
-.botones {
+.counter-buttons  {
   font-size: 1.5rem;
   width: 2rem;
   height: 2rem;
   color: white;
   border-style:hidden;
   border-radius: 0.5rem;
-  background-color: #ece950;
+  background-color: #dee2a4;
   cursor: pointer;
 }

@@ -1,10 +1,10 @@
-import React from "react";
-import "../Item/Item.css";
-import { Link } from "react-router-dom";
+import React from "react"
+import "../Item/Item.css"
+import { Link } from "react-router-dom"
 
 function Item({ title, price, pictureUrl, id }) {
   return (
-    <>
+    <div className="items-category-container">
       <div className="item">
         <div
           style={{ backgroundImage: `url(${pictureUrl})` }}
@@ -14,15 +14,15 @@ function Item({ title, price, pictureUrl, id }) {
         <div className="price margin">${price}</div>
         <div className="button-container">
           <Link to={`/item/${id}`}>
-            <button className="comprar">Comprar</button>
+            <button className="buy-button">Comprar</button>
           </Link>
           <Link to={`/item/${id}`}>
-            <button className="ver-detalle">Detalles</button>
+            <button className="detail-view">Detalles</button>
           </Link>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default Item;
+export default Item

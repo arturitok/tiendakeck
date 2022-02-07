@@ -1,47 +1,60 @@
 .nav {
   font-size: 2rem;
-  color: darkgrey;
+  color: rgb(221, 245, 8);
   width: 100%;
-  background-color: whitesmoke;
+  background-color: rgb(228, 240, 175);
   display: flex;
   justify-content: space-around;
-  margin-bottom: 2rem;
+  height: 5rem;
 }
 
 .bar {
-  width: 31rem;
-  justify-content: space-between;
+  width: 30vw;
+  justify-content: space-evenly;
   display: flex;
   align-items: center;
 }
 
 .bar a {
   cursor: pointer;
-  color: blue;
+  color: rgb(10, 90, 14);
+  font-weight: bolder;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  margin-right: 2rem;
 }
 
 .bar a:hover {
-  background-color: #ece950;
+  background-color: rgb(214, 218, 17);
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
+
 .brand {
+  width: 10vw;
   cursor: pointer;
   color: blue;
   text-decoration: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
   padding: 0.5rem 1rem;
 }
 
 .brand:hover {
-  background-color: #ece950;
+  background-color: rgb(214, 218, 17);
   border-radius: 4px;
   transition: all 0.2s ease-out;
 }
 
+.cart-widget {
+  width: 5vw;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
-  .caja {
+  .bar {
     width: 28vh;
   }
 }

@@ -1,40 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useCart } from "../../context/CartContext";
-import "../Payment/Payment.css";
+import React from "react"
+import { Link } from "react-router-dom"
+import { useCart } from "../../context/CartContext"
+import "../Payment/Payment.css"
 
 function Payment() {
-  const { orderState, clear } = useCart();
-
+  const { orderState, clear } = useCart()
+ 
   return (
     <div className="payment">
       <div className="payment-container">
-        <div className="pago-realizado">
-          El pago se realizó correctamente. Gracias por la compra
+        <div className="payment-made">
+          El pago se realizó correctamente. Gracias por tu compra
         </div>
         <div className="date-id">
-          Código de la operacion: {orderState.IDOrder}
+          Código de seguimiento: {orderState.IDOrder}
         </div>
         <div className="date-id">Fecha: {orderState.date}</div>
         <div className="order-detail">Detalle de la compra</div>
         <div>
           {orderState.items[0].map((element) => (
-            <>
-              <div className="order-detail-child">
+           
+              <div className="order-detail-child" key={element.id}>
                 {element.title} - ${element.price} | {element.quantity}{" "}
-                Artículos
-              </div>
-            </>
+                Unidades
+           
+            </div>
           ))}
         </div>
         <div className="order-detail-child subtotal">
           Total: ${orderState.totalPrice} | {orderState.totalItems} Unidades
         </div>
-
         <div className="order-detail">Tus datos registrados</div>
-        <div className="buyer">{orderState.name}</div>
-        <div className="buyer">{orderState.phone}</div>
-        <div className="buyer">{orderState.email}</div>
+        <div className="buyer">Nombre  : {orderState.name}</div>
+        <div className="buyer">Telefono: {orderState.phone}</div>
+        <div className="buyer">e-mail  :{orderState.email}</div>
       </div>
       <Link to="/">
         <button onClick={clear} className="back-shop margin-top">
@@ -42,7 +41,7 @@ function Payment() {
         </button>
       </Link>
     </div>
-  );
+  )
 }
 
-export default Payment;
+export default Payment

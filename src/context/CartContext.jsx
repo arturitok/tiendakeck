@@ -1,55 +1,60 @@
-import { createContext, useContext, useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { createContext, useContext, useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 
-export const CartContext = createContext();
-export const useCart = () => useContext(CartContext);
+const CartContext = createContext()
+
+export const useCart = () => useContext(CartContext)
 
 export const CartProvider = (props) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([])
 
   const addItem = (datos, cantidad) => {
     if (isInCart(datos)) {
-      products.map((prod) => {
-        if (prod.id === datos.id) {
-          return (prod.quantity += cantidad);
-        }
-      });
+      const productsCopy = [...products]
+      let found = productsCopy.find((p) => p.id === datos.id)
+      found.quantity += cantidad
+      setProducts(productsCopy)
     } else {
       setProducts((state) => {
-        return [...state, { ...datos, quantity: cantidad }];
-      });
+        return [...state, { ...datos, quantity: cantidad }]
+      })
     }
-  };
+  }
 
   const removeItem = (product) => {
-    const productosFiltrados = products.filter((elem) => elem !== product);
-    setProducts(productosFiltrados);
-  };
-
-  function clear() {
-    setProducts([]);
+    const productosFiltrados = products.filter((elem) => elem !== product)
+    setProducts(productosFiltrados)
   }
 
   const isInCart = (datoBuscado) => {
     if (products?.find((elemento) => elemento.id === datoBuscado.id)) {
-      return true;
+      return true
     }
-  };
+  }
 
-  const totalItems = () =>
-    products.reduce((acumulador, items) => acumulador + items.quantity, 0);
-  const totalPrice = () =>
-    products.reduce(
-      (acumulador, items) => acumulador + items.price * items.quantity,
-      0
-    );
+  const totalItems = () => {
+    let sum = 0
+    products.forEach((item) => {
+      sum += item.quantity
+    })
+    return sum
+  }
+
+  const totalPrice = () => {
+    let sum = 0
+    products.forEach((item) => {
+      sum += item.quantity * item.price
+    })
+    return sum
+  }
+  
   const newOrder = {
     items: [products],
     date: new Date().toString(),
     totalItems: totalItems(),
     totalPrice: totalPrice(),
     IDOrder: uuidv4(),
-  };
+  }
 
   const [orderState, setOrderState] = useState({
     ...newOrder,
@@ -57,30 +62,31 @@ export const CartProvider = (props) => {
     email: "",
     emailConfirm: "",
     phone: "",
-  });
+  })
 
   const updateDatos = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     setOrderState({
       ...orderState,
       ...newOrder,
       [event.target.name]: event.target.value,
-    });
-  };
+      
+    })
+  }
 
   const enviarDatos = (event) => {
-    event.preventDefault();
-  };
+    event.preventDefault()
+  }
 
   function clear() {
-    setProducts([]);
+    setProducts([])
     setOrderState({
       ...newOrder,
       name: "",
       email: "",
       emailConfirm: "",
       phone: "",
-    });
+    })
   }
 
   return (
@@ -99,5 +105,5 @@ export const CartProvider = (props) => {
     >
       {props.children}
     </CartContext.Provider>
-  );
-};
+  )
+}
