@@ -1,5 +1,8 @@
 # Documentación del proyecto - e-commerce Tienda Taca Taca
 
+![Tienda-Taca-Taca-Persona-1_-Microsoft_-Edge-2022-02-07-18-53-43](https://user-images.githubusercontent.com/87787593/152888273-ccf88664-ab53-4094-80bd-0ed65ce16b2b.gif)
+
+
 ## Descripción general
 
 Esta aplicación fue desarrollada en el marco del curso de ReactJS de CoderHouse y se trata de una plataforma e-commerce que muestra información de productos que el usuario puede comprar (en sentido figurado), realizando la navegación por categorías (en este caso dos: ropa y juguetes) y visualizando el detalle de cada producto.
@@ -35,9 +38,9 @@ En caso de querer replicar el proyecto seguir estos pasos desde git bash:
 
 5. Se abrirá el browser predeterminado y se ejecutará la aplicación. Accesible desde:
 
-   http://localhost:3000
+   localhost:3000
 
-   Si el puerto está ocupado el script sugerirá otro port (por ejemplo http://localhost:3001)
+   Si el puerto está ocupado el script sugerirá otro port (por ejemplo localhost:3001)
 
 6. Detener el servicio:
    En la consola presionar Ctrl+C
@@ -69,10 +72,13 @@ El carrito quedará vacio y podremos acceder al listado de productos desde el bo
 
 La implementación de la estructura intenta aislar las responsabilidades de cada componente, siempre que sea posible. En forma esquemática la arquitectura se visualiza en el siguiente diagrama.
 
+![tiendaDiagram](https://user-images.githubusercontent.com/87787593/152888525-8cd133d1-a575-432d-a6ed-2d19088bdded.png)
+
+
 ## Información del autor:
 Mi nombre es Arturo y estoy haciendo las primeras armas en Front End Developing.
 
 Cualquier aporte o comentario será muy bienvendido.
 
-Estoy en Gihub y Linkedin.
+Estoy en Gihub y Linkedin. 
 
