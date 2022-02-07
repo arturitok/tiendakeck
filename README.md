@@ -1,4 +1,4 @@
-# Documentación del proyecto - e-commerce Tienda Taca Taca
+# Documentación del proyecto E-commerce Tienda Taca Taca
 
 ![Tienda-Taca-Taca-Persona-1_-Microsoft_-Edge-2022-02-07-18-53-43](https://user-images.githubusercontent.com/87787593/152888273-ccf88664-ab53-4094-80bd-0ed65ce16b2b.gif)
 
