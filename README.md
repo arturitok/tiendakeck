@@ -22,7 +22,7 @@ En caso de querer replicar el proyecto seguir estos pasos desde git bash:
 
 1. Clonar el repositorio
 
-   git clone https://ggithub.com/arturitok/tiendakeck
+   git clone https://github.com/arturitok/tiendakeck
 
 2. Ubicarse en la carpeta correspondiente
 
@@ -80,5 +80,5 @@ Mi nombre es Arturo y estoy haciendo las primeras armas en Front End Developing.
 
 Cualquier aporte o comentario será muy bienvendido.
 
-Estoy en Gihub y Linkedin. 
+Estoy en [Github](https://github.com/arturitok)  y [Linkedin](https://www.linkedin.com/in/arturo-keck-1b858313/). 
 
