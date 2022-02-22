@@ -7,6 +7,7 @@
 
 Esta aplicación fue desarrollada en el marco del curso de ReactJS de CoderHouse y se trata de una plataforma e-commerce que muestra información de productos que el usuario puede comprar (en sentido figurado), realizando la navegación por categorías (en este caso dos: ropa y juguetes) y visualizando el detalle de cada producto.
 Los artículos están alamcenados en un base de datos Firebase.
+Lo publiqué en Netlify, [Se puede ver acá](https://heuristic-clarke-0d9f87.netlify.app/)
 
 ## Tecnologías empleadas
 
